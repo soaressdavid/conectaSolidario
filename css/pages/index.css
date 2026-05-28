@@ -17,13 +17,18 @@
 }
 .hero-content { position: relative; max-width: 660px; }
 .hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(212,84,26,.2); border: 1px solid rgba(212,84,26,.35);
-  color: #FBCBA4; font-size: .8rem; font-weight: 700;
-  letter-spacing: .12em; text-transform: uppercase;
-  padding: 6px 14px; border-radius: 50px; margin-bottom: 24px;
+  display: inline-flex; align-items: center; gap: 10px;
+  color: #FBCBA4; font-size: .82rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  padding: 8px 18px; margin-bottom: 24px;
+  position: relative;
 }
-.hero-eyebrow::before { content: ''; display: inline-block; width: 6px; height: 6px; background: var(--orange-l); border-radius: 50%; margin-right: 4px; }
+.hero-eyebrow::before {
+  content: '';
+  position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  width: 3px; height: 16px; background: var(--orange-l);
+  border-radius: 2px;
+}
 .hero h1 {
   color: var(--white); margin-bottom: 24px;
   text-shadow: 0 2px 24px rgba(0,0,0,.3);
@@ -45,8 +50,15 @@
   position: absolute; right: -40px; bottom: 0; top: 68px;
   width: 48%; display: flex; align-items: flex-end;
   justify-content: center; overflow: hidden;
+  max-width: 48%;
 }
-.hero-circles { position: relative; width: 420px; height: 420px; }
+@media (max-width: 900px) {
+  .hero-illustration { display: none; }
+}
+.hero-circles { position: relative; width: 420px; height: 420px; max-width: 100%; }
+@media (max-width: 900px) {
+  .hero-circles { display: none; }
+}
 .circle-pulse {
   position: absolute; border-radius: 50%;
   border: 1px solid rgba(255,255,255,.1);
@@ -64,22 +76,35 @@
 .hero-icon-center p { font-family: 'Playfair Display', serif; font-size: 1.1rem; opacity: .8; }
 
 /* ─── About strip (index.html) ────────────────────────────────── */
-.about-strip { background: var(--orange); padding: 56px 0; }
+.about-strip { background: var(--orange); padding: 56px 0; width: 100%; }
 .about-strip-inner {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+  display: grid; grid-template-columns: 1fr 0.6fr; gap: 24px; align-items: center;
+  width: 100%;
 }
 .about-strip h2 { color: var(--white); margin-bottom: 16px; }
 .about-strip p  { color: rgba(255,255,255,.85); font-size: 1.05rem; }
-.about-img-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.about-img-block {
-  border-radius: var(--radius); aspect-ratio: 1;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 10px; font-size: .85rem; font-weight: 600; color: var(--white); text-align: center;
+.about-img-grid {
+  display: grid; grid-template-columns: 1fr; gap: 8px;
+  width: 100%;
 }
-.about-img-block .icon { font-size: 2rem; }
+.about-img-block {
+  border-radius: var(--radius);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; font-size: .75rem; font-weight: 600; color: var(--white); text-align: center;
+  padding: 10px;
+  min-height: 140px;
+}
+.about-img-block .icon { font-size: 1.4rem; }
 .aib-1 { background: rgba(255,255,255,.15); }
-.aib-2 { background: rgba(255,255,255,.10); grid-row: span 2; }
+.aib-2 { background: rgba(255,255,255,.10); }
 .aib-3 { background: rgba(255,255,255,.20); }
+
+@media (max-width: 768px) {
+  .about-img-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .about-img-block { aspect-ratio: auto; min-height: 70px; padding: 12px; font-size: .75rem; }
+  .about-img-block .icon { font-size: 1.5rem; }
+  .aib-2 { grid-row: span 2; }
+}
 
 /* ─── Campaigns section (index.html) ─────────────────────────── */
 .campaigns-section { background: var(--cream); }
@@ -101,6 +126,7 @@
 .how-section { background: var(--warm); }
 .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 24px; }
 .step-card { text-align: center; padding: 36px 24px; }
+.step-card:hover { transform: none; }
 .step-num {
   width: 52px; height: 52px; border-radius: 50%; background: var(--orange);
   color: var(--white); font-family: 'Playfair Display', serif;

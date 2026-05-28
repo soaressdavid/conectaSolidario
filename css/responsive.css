@@ -1,11 +1,22 @@
 /* ─── Responsive ─────────────────────────────────────────── */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  font-size: 16px;
+}
 @media (max-width: 1024px) {
+  html { font-size: 15px; }
   .container { padding: 0 20px; }
   .hero-stats { gap: 24px; }
   .hero-stat strong { font-size: 1.8rem; }
 }
 
 @media (max-width: 900px) {
+  html { font-size: 14px; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .navbar-nav, .navbar-actions .btn { display: none; }
@@ -19,11 +30,18 @@
   .hero-cta { flex-direction: column; }
   .hero-cta .btn { width: 100%; justify-content: center; }
   .hero-stats { flex-wrap: wrap; justify-content: center; }
+  .hero-illustration { display: none; }
+  .about-strip-inner { grid-template-columns: 1fr; }
+  .about-img-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .cta-banner .cta-btns { flex-direction: column; }
+  .cta-banner .cta-btns .btn { width: 100%; }
 }
 
 @media (max-width: 768px) {
-  .section { padding: 64px 0; }
-  .hero { padding-top: 80px; }
+  html { font-size: 14px; }
+  .section { padding: 56px 0; }
+  .hero { padding-top: 70px; }
   .hero-eyebrow { font-size: .75rem; }
   .hero h1 { font-size: 2rem; }
   .hero-desc { font-size: 1rem; }
@@ -32,12 +50,16 @@
   .hero-stat span { font-size: .75rem; }
   .campaigns-grid { grid-template-columns: 1fr; }
   .about-strip-inner { flex-direction: column; }
-  .about-img-grid { grid-template-columns: 1fr; }
+  .about-img-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .about-img-block { aspect-ratio: auto; min-height: 70px; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
   .vol-layout { grid-template-columns: 1fr; gap: 32px; }
+  .filter-bar { flex-direction: column; }
+  .filter-btn { width: 100%; text-align: center; }
 }
 
 @media (max-width: 600px) {
+  html { font-size: 14px; }
   .section { padding: 48px 0; }
   .container { padding: 0 16px; }
   .modal { padding: 24px 16px; }
@@ -63,9 +85,16 @@
   .table-actions .btn { width: 100%; }
   #toast-container { left: 16px; right: 16px; bottom: 16px; }
   .toast { min-width: auto; }
+  .campaign-card-top { padding: 20px 20px 16px; }
+  .campaign-card-body { padding: 16px 20px 20px; }
+  .campaign-icon { font-size: 2.2rem; }
+  .contact-form { padding: 24px; }
+  .section-header { text-align: center; }
+  .section-header p { margin-left: auto; margin-right: auto; }
 }
 
 @media (max-width: 480px) {
+  html { font-size: 13px; }
   .hero h1 { font-size: 1.6rem; }
   .hero-desc { font-size: .9rem; }
   .hero-cta { gap: 10px; }
@@ -79,4 +108,79 @@
   .modal-overlay { padding: 0; }
   .btn { padding: 8px 16px; font-size: .85rem; }
   .btn-lg { padding: 12px 24px; }
+  .step-card { padding: 28px 16px; }
+  .step-num { width: 44px; height: 44px; font-size: 1.1rem; }
+  .about-strip { padding: 40px 0; }
+  .about-img-grid { gap: 8px; }
+  .about-img-block { padding: 16px; }
+  .campaign-card-top { padding: 16px 16px 12px; }
+  .campaign-card-body { padding: 14px 16px 16px; }
+  .campaign-icon { font-size: 2rem; }
+  .campaign-dates { font-size: .75rem; padding: 8px 12px; }
+  .login-card { padding: 32px 24px; }
+  .login-logo .icon-wrap { width: 50px; height: 50px; font-size: 1.5rem; }
+  .form-card { padding: 24px 16px; }
+  .vol-aside .why-card { padding: 24px 16px; }
+  .why-item { padding: 12px 0; }
+  .why-icon { font-size: 1.4rem; }
+}
+
+@media (max-width: 360px) {
+  html { font-size: 12px; }
+  .section { padding: 40px 0; }
+  .hero h1 { font-size: 1.4rem; }
+  .hero-desc { font-size: .85rem; }
+  .hero-eyebrow { font-size: .7rem; padding: 4px 10px; }
+  .hero-stat strong { font-size: 1.2rem; }
+  .hero-stat span { font-size: .7rem; }
+  .btn { padding: 8px 14px; font-size: .8rem; }
+  .btn-lg { padding: 10px 20px; font-size: .9rem; }
+  .btn-sm { padding: 5px 12px; font-size: .75rem; }
+  .navbar-brand { font-size: 1rem; }
+  .navbar-brand .brand-icon { width: 28px; height: 28px; font-size: .9rem; }
+  .page-hero { padding: 80px 0 40px; }
+  .page-hero h1 { font-size: 1.5rem; }
+  .page-hero p { font-size: .9rem; }
+  .campaign-card-top { padding: 14px 14px 10px; }
+  .campaign-card-body { padding: 12px 14px 14px; }
+  .campaign-icon { font-size: 1.8rem; }
+  .campaign-card-body h3 { font-size: 1rem; }
+  .campaign-card-body p { font-size: .85rem; }
+  .step-card { padding: 24px 12px; }
+  .step-num { width: 40px; height: 40px; font-size: 1rem; }
+  .step-card h3 { font-size: 1rem; }
+  .step-card p { font-size: .85rem; }
+  .filter-bar { padding: 16px 12px; }
+  .filter-btn { padding: 6px 16px; font-size: .8rem; }
+  .login-card { padding: 24px 16px; }
+  .login-logo .icon-wrap { width: 44px; height: 44px; font-size: 1.3rem; }
+  .form-control { padding: 8px 12px; font-size: .85rem; }
+  .modal { padding: 20px 12px; }
+}
+
+/* ─── Inline style overrides for responsiveness ─────────────── */
+@media (max-width: 768px) {
+  #contato > .container > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  #contato > .container > div[style*="padding:32px"] {
+    padding: 24px !important;
+  }
+  .vol-layout {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #contato > .container > div[style*="grid-template-columns"] {
+    gap: 24px !important;
+  }
+  #contato > .container > div[style*="padding:32px"] {
+    padding: 20px !important;
+  }
+  .vol-layout {
+    gap: 24px !important;
+  }
 }

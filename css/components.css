@@ -53,12 +53,34 @@
 
 /* ─── Badges ─────────────────────────────────────────────── */
 .badge {
-  display: inline-flex; align-items: center; gap: 4px;
-  padding: 4px 12px; border-radius: 50px; font-size: .78rem; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 16px; border-radius: 20px; font-size: .76rem; font-weight: 600;
+  letter-spacing: 0.03em;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
 }
-.badge-green  { background: #D4EDDA; color: #1A6B3A; }
-.badge-orange { background: #FDEBD0; color: #8B4513; }
-.badge-red    { background: #FDECEA; color: #8B1A1A; }
+.badge::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+.badge-green  {
+  background: #2C4A3E;
+  color: #fff;
+  border-color: #3D6457;
+}
+.badge-orange {
+  background: #D4541A;
+  color: #fff;
+  border-color: #E8733D;
+}
+.badge-red    {
+  background: #8B1A1A;
+  color: #fff;
+  border-color: #C0392B;
+}
 
 /* ─── Forms ──────────────────────────────────────────────── */
 .form-group { margin-bottom: 20px; }

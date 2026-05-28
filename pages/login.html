@@ -29,12 +29,12 @@
         <label class="form-label">Senha <span>*</span></label>
         <div class="password-wrap">
           <input type="password" id="senha" class="form-control" data-required placeholder="••••••••">
-          <button type="button" class="password-toggle" id="toggle-pwd">👁</button>
+          <button type="button" class="password-toggle" id="toggle-pwd"><i class="fas fa-eye"></i></button>
         </div>
         <span class="form-error" style="display:none"></span>
       </div>
       <div id="login-error" style="display:none;background:#FDECEA;color:#8B1A1A;border-radius:var(--radius);padding:12px 16px;font-size:.88rem;margin-bottom:16px;border:1px solid #F5C6C6">
-        ⚠️ E-mail ou senha incorretos. Tente novamente.
+        <i class="fas fa-exclamation-triangle"></i> E-mail ou senha incorretos. Tente novamente.
       </div>
       <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">
         Entrar no painel
@@ -54,7 +54,7 @@
     const inp = document.getElementById('senha');
     const showing = inp.type === 'text';
     inp.type = showing ? 'password' : 'text';
-    this.textContent = showing ? '👁' : '🙈';
+    this.innerHTML = showing ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
   });
 
   document.getElementById('login-form').addEventListener('submit', async e => {

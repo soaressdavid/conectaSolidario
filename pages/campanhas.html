@@ -16,7 +16,7 @@
 <nav class="navbar">
   <div class="container navbar-inner">
     <a href="../index.html" class="navbar-brand">
-      <span class="brand-icon">🤝</span> Conecta Solidário
+      <span class="brand-icon"><i class="fas fa-handshake"></i></span> Conecta Solidário
     </a>
     <ul class="navbar-nav">
       <li><a href="../index.html">Início</a></li>
@@ -85,7 +85,7 @@
 
     if (!filtered.length) {
       grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1">
-        <div class="icon">🔍</div>
+        <div class="icon"><i class="fas fa-search"></i></div>
         <h3>Nenhuma campanha encontrada</h3>
         <p>Tente outro filtro.</p>
       </div>`; return;
@@ -102,7 +102,7 @@
         <div class="campaign-card-body">
           <h3>${c.titulo}</h3>
           <p>${c.descricao}</p>
-          <div class="campaign-dates">📅 <span>${formatDate(c.data_inicio)}</span> até <span>${formatDate(c.data_fim)}</span></div>
+          <div class="campaign-dates"><i class="fas fa-calendar-alt"></i> <span>${formatDate(c.data_inicio)}</span> até <span>${formatDate(c.data_fim)}</span></div>
           ${st.label === 'Ativa' ? `<a href="voluntario.html" class="btn btn-forest btn-sm">Quero ajudar</a>` : `<span class="btn btn-ghost btn-sm" style="cursor:default">${st.label}</span>`}
         </div>
       </div>`;
