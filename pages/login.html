@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Admin – Conecta Solidário</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/pages/login.css">
+</head>
+<body>
+<div class="login-wrap">
+  <div class="login-card">
+    <div class="login-logo">
+      <div class="icon-wrap"><i class="fas fa-handshake"></i></div>
+      <h2>Conecta Solidário</h2>
+      <p>Área administrativa</p>
+    </div>
+
+    <form id="login-form">
+      <div class="form-group">
+        <label class="form-label">E-mail <span>*</span></label>
+        <input type="email" id="email" class="form-control" data-required placeholder="admin@conectasolidario.com.br">
+        <span class="form-error" style="display:none"></span>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Senha <span>*</span></label>
+        <div class="password-wrap">
+          <input type="password" id="senha" class="form-control" data-required placeholder="••••••••">
+          <button type="button" class="password-toggle" id="toggle-pwd">👁</button>
+        </div>
+        <span class="form-error" style="display:none"></span>
+      </div>
+      <div id="login-error" style="display:none;background:#FDECEA;color:#8B1A1A;border-radius:var(--radius);padding:12px 16px;font-size:.88rem;margin-bottom:16px;border:1px solid #F5C6C6">
+        ⚠️ E-mail ou senha incorretos. Tente novamente.
+      </div>
+      <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">
+        Entrar no painel
+      </button>
+    </form>
+
+    <a href="../index.html" class="back-link">← Voltar ao site</a>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+<script src="../js/config.js"></script>
+<script src="../js/api-unified.js"></script>
+<script>
+  // Toggle password visibility
+  document.getElementById('toggle-pwd').addEventListener('click', function() {
+    const inp = document.getElementById('senha');
+    const showing = inp.type === 'text';
+    inp.type = showing ? 'password' : 'text';
+    this.textContent = showing ? '👁' : '🙈';
+  });
+
+  document.getElementById('login-form').addEventListener('submit', async e => {
+    e.preventDefault();
+    document.getElementById('login-error').style.display = 'none';
+    if (!validateForm(e.target)) return;
+
+    const btn = document.getElementById('submit-btn');
+    btn.textContent = 'Entrando…'; btn.disabled = true;
+
+    const creds = {
+      email: document.getElementById('email').value.trim(),
+      senha: document.getElementById('senha').value,
+    };
+
+    try {
+      const res = await API.login(creds);
+      // Backend retorna dados do admin no JSON
+      sessionStorage.setItem('cs_admin', JSON.stringify(res));
+      window.location.href = 'admin.html';
+    } catch (err) {
+      if (err.status === 401 || err.status === 403) {
+        document.getElementById('login-error').style.display = 'block';
+      } else {
+        // Demo: aceitar credenciais de teste do config.js
+        if (creds.email === CONFIG.DEMO.CREDENTIALS.email && creds.senha === CONFIG.DEMO.CREDENTIALS.senha) {
+          sessionStorage.setItem('cs_admin', JSON.stringify({ email: creds.email, nome: 'Administrador' }));
+          window.location.href = 'admin.html';
+        } else {
+          document.getElementById('login-error').style.display = 'block';
+        }
+      }
+      btn.textContent = 'Entrar no painel'; btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

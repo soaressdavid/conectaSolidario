@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <h1>Teste da API Unificada</h1>
+    <div id="result"></div>
+    <div id="debug"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api-unified.js"></script>
+    
+    <script>
+        async function testAPI() {
+            const resultDiv = document.getElementById('result');
+            const debugDiv = document.getElementById('debug');
+            
+            try {
+                // Testar se a configuração está carregada
+                debugDiv.innerHTML += `<p>Modo Apresentação: ${CONFIG.MODO_APRESENTACAO}</p>`;
+                
+                // Testar carregamento de campanhas
+                debugDiv.innerHTML += '<p>Carregando campanhas...</p>';
+                const campanhas = await API.getCampanhas();
+                debugDiv.innerHTML += `<p>Campanhas recebidas: ${campanhas.length}</p>`;
+                
+                // Mostrar primeira campanha
+                if (campanhas.length > 0) {
+                    const primeira = campanhas[0];
+                    resultDiv.innerHTML = `
+                        <h2>Primeira Campanha:</h2>
+                        <h3>${primeira.titulo}</h3>
+                        <p>${primeira.descricao}</p>
+                        <p>Data Início: ${primeira.dataInicio}</p>
+                        <p>Data Fim: ${primeira.dataFim}</p>
+                        <p>Meta: ${primeira.meta}</p>
+                        <p>Arrecadado: ${primeira.arrecadado}</p>
+                    `;
+                }
+                
+                // Testar carregamento de voluntários
+                debugDiv.innerHTML += '<p>Carregando voluntários...</p>';
+                const voluntarios = await API.getVoluntarios();
+                debugDiv.innerHTML += `<p>Voluntários recebidos: ${voluntarios.length}</p>`;
+                
+                // Mostrar primeiro voluntário
+                if (voluntarios.length > 0) {
+                    const primeiro = voluntarios[0];
+                    resultDiv.innerHTML += `
+                        <h2>Primeiro Voluntário:</h2>
+                        <h3>${primeiro.nome}</h3>
+                        <p>Email: ${primeiro.email}</p>
+                        <p>Telefone: ${primeiro.telefone}</p>
+                        <p>Interesse: ${primeiro.interesse}</p>
+                    `;
+                }
+                
+            } catch (error) {
+                resultDiv.innerHTML = `<p style="color: red;">Erro: ${error.message}</p>`;
+                debugDiv.innerHTML += `<p style="color: red;">Erro: ${error.message}</p>`;
+            }
+        }
+        
+        // Executar teste quando a página carregar
+        window.addEventListener('load', testAPI);
+    </script>
+</body>
+</html>

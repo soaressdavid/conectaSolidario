@@ -1,0 +1,30 @@
+/* ─── Volunteer page (pages/voluntario.html) ──────────────────── */
+.vol-layout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+  align-items: start; padding: 72px 0;
+}
+.vol-aside .why-card {
+  background: var(--card-bg); border-radius: var(--radius-l);
+  padding: 32px; border: 1px solid rgba(122,74,46,.10);
+  box-shadow: var(--shadow); margin-bottom: 20px;
+}
+.why-item {
+  display: flex; align-items: flex-start; gap: 16px; padding: 16px 0;
+  border-bottom: 1px solid #F0E8DC;
+}
+.why-item:last-child { border-bottom: none; padding-bottom: 0; }
+.why-icon { font-size: 1.6rem; flex-shrink: 0; }
+.why-item h4 { font-size: .95rem; margin-bottom: 4px; }
+.why-item p  { font-size: .85rem; margin: 0; }
+.form-card { background: var(--card-bg); border-radius: var(--radius-l); padding: 40px; border: 1px solid rgba(122,74,46,.10); box-shadow: var(--shadow); }
+.success-state {
+  text-align: center; padding: 48px 24px; display: none;
+}
+.success-state .check {
+  width: 72px; height: 72px; background: #D4EDDA; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem; margin: 0 auto 20px;
+}
+
+/* ─── Responsive (pages/voluntario.html) ─────────────────────── */
+@media (max-width: 900px) { .vol-layout { grid-template-columns: 1fr; gap: 32px; } }

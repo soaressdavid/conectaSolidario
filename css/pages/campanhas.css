@@ -1,0 +1,14 @@
+/* ─── Filter bar (pages/campanhas.html) ──────────────────────── */
+.filter-bar {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px;
+  padding: 20px 24px; background: var(--card-bg);
+  border-radius: var(--radius-l); border: 1px solid rgba(122,74,46,.10);
+}
+.filter-btn {
+  padding: 8px 20px; border-radius: 50px; border: 1.5px solid #D9D0C3;
+  background: transparent; cursor: pointer; font-size: .85rem; font-weight: 600;
+  color: var(--text-m); transition: all var(--trans); font-family: inherit;
+}
+.filter-btn.active, .filter-btn:hover {
+  background: var(--orange); color: var(--white); border-color: var(--orange);
+}

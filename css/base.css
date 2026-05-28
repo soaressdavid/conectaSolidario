@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ─── Design Tokens ─────────────────────────────────────── */
+:root {
+  --cream:    #F5F0E8;
+  --warm:     #EDE5D4;
+  --orange:   #D4541A;
+  --orange-l: #E8733D;
+  --earth:    #7A4A2E;
+  --forest:   #2C4A3E;
+  --forest-l: #3D6457;
+  --text:     #1A1208;
+  --text-m:   #4A3F30;
+  --text-s:   #7A6E60;
+  --white:    #FFFFFF;
+  --card-bg:  #FFFDF9;
+  --shadow:   0 4px 24px rgba(26,18,8,.10);
+  --shadow-h: 0 8px 40px rgba(26,18,8,.18);
+  --radius:   12px;
+  --radius-l: 20px;
+  --trans:    .25s cubic-bezier(.4,0,.2,1);
+}
+
+/* ─── Reset ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button, input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ─── Typography ─────────────────────────────────────────── */
+h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+h1 { font-size: clamp(2.2rem,5vw,4rem); font-weight: 900; }
+h2 { font-size: clamp(1.6rem,3.5vw,2.8rem); font-weight: 700; }
+h3 { font-size: clamp(1.2rem,2vw,1.6rem); font-weight: 700; }
+p  { color: var(--text-m); }
+
+/* ─── Utilities ──────────────────────────────────────────── */
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.section    { padding: 80px 0; }
+.section-sm { padding: 48px 0; }
+.text-center { text-align: center; }
+.hidden { display: none !important; }

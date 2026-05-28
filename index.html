@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conecta Solidário – Campanhas sociais para quem mais precisa</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<!-- ── Navbar ──────────────────────────────────────────────── -->
+<nav class="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="navbar-brand">
+      <span class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a3 3 0 1 0-5.12-2.12L10 8.26l-1.12-1.12A3 3 0 1 06 8a3 3 0 1 0 4.12 2.12L10 9.74l.88-.88A3 3 0 1 018 18"/><path d="M7 16a4 4 0 0 0 3-3 4 4 0 0 1 3 3"/><path d="M4 21a7 7 0 0 1 7-7 7 7 0 0 1 7 7"/><path d="M14 7a4 4 0 0 1 3 3 4 4 0 0 0 3-3"/></svg>
+      </span>
+      Conecta Solidário
+    </a>
+    <ul class="navbar-nav">
+      <li><a href="index.html" class="active">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#campanhas">Campanhas</a></li>
+      <li><a href="pages/voluntario.html">Seja Voluntário</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <a href="pages/voluntario.html" class="btn btn-primary btn-sm">Quero Ajudar</a>
+    </div>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu">
+  <a href="index.html">Início</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#campanhas">Campanhas</a>
+  <a href="pages/voluntario.html">Seja Voluntário</a>
+  <a href="#contato">Contato</a>
+  <a href="pages/login.html">Área Admin</a>
+  <a href="pages/voluntario.html" class="btn btn-primary" style="margin-top:8px">Quero Ajudar</a>
+</div>
+
+<!-- ── Hero ────────────────────────────────────────────────── -->
+<section class="hero" id="inicio">
+  <div class="container" style="position:relative;z-index:2">
+    <div class="hero-content">
+      <div class="hero-eyebrow">São Paulo</div>
+      <h1>Ajudar quem precisa nunca foi tão simples</h1>
+      <p class="hero-desc">
+        Encontre campanhas de arrecadação e ações voluntárias na sua cidade. Cadastre-se e
+        receba informações sobre como participar.
+      </p>
+      <div class="hero-cta">
+        <a href="#campanhas" class="btn btn-primary btn-lg">Ver Campanhas</a>
+        <a href="pages/voluntario.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5);color:#fff">Quero Ajudar</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat" id="stat-campanhas">
+          <strong>–</strong><span>Campanhas</span>
+        </div>
+        <div class="hero-stat" id="stat-voluntarios">
+          <strong>–</strong><span>Voluntários</span>
+        </div>
+        <div class="hero-stat">
+          <strong>SP</strong><span>São Paulo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-illustration">
+    <div class="hero-icon-center">
+      <div class="big-icon">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Sobre ────────────────────────────────────────────────── -->
+<section class="about-strip" id="sobre">
+  <div class="container">
+    <div class="about-strip-inner">
+      <div>
+        <div class="section-label" style="color:rgba(255,255,255,.7)">Quem somos</div>
+        <h2>Inspirados pela SP Invisível, movidos pela empatia</h2>
+        <p style="margin-top:16px">
+          O Conecta Solidário nasceu da vontade de dar mais visibilidade a ações sociais voltadas
+          para pessoas em situação de rua. Em São Paulo, milhares de pessoas precisam de apoio —
+          e centenas de voluntários querem ajudar, mas não sabem como.
+        </p>
+        <p style="margin-top:12px">
+          Nossa plataforma centraliza campanhas de arrecadação, eventos voluntários e cadastros em
+          um único lugar, simples e acessível.
+        </p>
+        <a href="pages/voluntario.html" class="btn btn-lg" style="margin-top:28px;background:var(--white);color:var(--orange)">
+          Faça parte desta história
+        </a>
+      </div>
+      <div class="about-img-grid">
+        <div class="about-img-block aib-1">
+          <span class="icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a3 3 0 1 0-5.12-2.12L10 8.26l-1.12-1.12A3 3 0 1 06 8a3 3 0 1 0 4.12 2.12L10 9.74l.88-.88A3 3 0 1 018 18"/><path d="M7 16a4 4 0 0 0 3-3 4 4 0 0 1 3 3"/><path d="M4 21a7 7 0 0 1 7-7 7 7 0 0 1 7 7"/><path d="M14 7a4 4 0 0 1 3 3 4 4 0 0 0 3-3"/></svg>
+          </span>
+          Arrecadação de alimentos
+        </div>
+        <div class="about-img-block aib-2">
+          <span class="icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </span>
+          Ações com impacto real
+        </div>
+        <div class="about-img-block aib-3">
+          <span class="icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2 12 5.5 8 2l-4.38 1.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6l.23-1.37a8 8 0 0 1 5.54 0L12 10.18V20a2 2 0 0 1-2 2h-.18a2 2 0 0 1-1.82-1.18L6 19l-1.27.57A2 2 0 0 0 4 21.43V22a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-.57a2 2 0 0 0-.73-1.86L18 19l-2-1.18a2 2 0 0 1-1.82-1.18H14a1 1 0 0 1 .99-.84h.16a1 1 0 0 1 .99.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+          </span>
+          Roupas e cobertores
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Campanhas ────────────────────────────────────────────── -->
+<section class="section campaigns-section" id="campanhas">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Ação agora</div>
+      <h2>Campanhas em andamento</h2>
+      <p>Veja como você pode contribuir com as iniciativas ativas no momento.</p>
+    </div>
+    <div id="campaigns-grid" class="campaigns-grid">
+      <div class="loader-wrap"><div class="spinner"></div><p>Carregando campanhas…</p></div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="pages/campanhas.html" class="btn btn-outline">Ver todas as campanhas →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Como funciona ────────────────────────────────────────── -->
+<section class="section how-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <div class="section-label">Simples assim</div>
+      <h2>Como participar</h2>
+      <p style="margin: 0 auto;">Ajudar nunca foi tão fácil. Veja o processo em poucos passos.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="card step-card">
+        <div class="step-num">1</div>
+        <h3>Explore as campanhas</h3>
+        <p>Veja todas as campanhas ativas e encontre uma que esteja alinhada com o que você quer fazer.</p>
+      </div>
+      <div class="card step-card">
+        <div class="step-num">2</div>
+        <h3>Cadastre-se como voluntário</h3>
+        <p>Preencha o formulário rápido com seu nome, e-mail e telefone. Leva menos de um minuto.</p>
+      </div>
+      <div class="card step-card">
+        <div class="step-num">3</div>
+        <h3>Receba o contato</h3>
+        <p>A equipe do Conecta Solidário entrará em contato para orientá-lo sobre como e quando contribuir.</p>
+      </div>
+      <div class="card step-card">
+        <div class="step-num">4</div>
+        <h3>Faça a diferença</h3>
+        <p>Participe da ação e ajude a transformar a vida de pessoas em situação de rua em São Paulo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA Banner ───────────────────────────────────────────── -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Pronto para fazer parte?</h2>
+    <p>Cadastre-se como voluntário agora e receba informações sobre as próximas campanhas.</p>
+    <div class="cta-btns">
+      <a href="pages/voluntario.html" class="btn btn-primary btn-lg">Quero ser voluntário</a>
+      <a href="#contato" class="btn btn-ghost btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Fale conosco</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contato ──────────────────────────────────────────────── -->
+<section class="section" id="contato" style="background:var(--warm)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start">
+      <div>
+        <div class="section-label">Fale conosco</div>
+        <h2>Entre em contato</h2>
+        <p style="margin-top:16px">
+          Tem alguma dúvida, sugestão ou quer saber mais sobre como ajudar?
+          Mande uma mensagem — nossa equipe responde em até 48 horas.
+        </p>
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;gap:12px;color:var(--text-m)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>contato@conectasolidario.org.br</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;color:var(--text-m)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>(11) 9 9999-0000</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;color:var(--text-m)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>São Paulo, SP</span>
+          </div>
+        </div>
+      </div>
+      <form class="card" style="padding:32px" id="contact-form">
+        <div class="form-group">
+          <label class="form-label">Nome <span>*</span></label>
+          <input type="text" class="form-control" data-required placeholder="Seu nome completo">
+          <span class="form-error" style="display:none"></span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">E-mail <span>*</span></label>
+          <input type="email" class="form-control" data-required placeholder="seu@email.com">
+          <span class="form-error" style="display:none"></span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mensagem <span>*</span></label>
+          <textarea class="form-control" data-required placeholder="Escreva sua mensagem…"></textarea>
+          <span class="form-error" style="display:none"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Enviar mensagem</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ───────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a3 3 0 1 0-5.12-2.12L10 8.26l-1.12-1.12A3 3 0 1 06 8a3 3 0 1 0 4.12 2.12L10 9.74l.88-.88A3 3 0 1 018 18"/><path d="M7 16a4 4 0 0 0 3-3 4 4 0 0 1 3 3"/><path d="M4 21a7 7 0 0 1 7-7 7 7 0 0 1 7 7"/><path d="M14 7a4 4 0 0 1 3 3 4 4 0 0 0 3-3"/></svg>
+          Conecta Solidário
+        </div>
+        <p class="footer-desc">
+          Plataforma web para divulgação de campanhas sociais e cadastro de voluntários,
+          auxiliando pessoas em situação de rua em São Paulo.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#campanhas">Campanhas</a></li>
+          <li><a href="pages/voluntario.html">Seja Voluntário</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Admin</h4>
+        <ul>
+          <li><a href="pages/login.html">Login</a></li>
+          <li><a href="pages/admin.html">Painel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Conecta Solidário. Todos os direitos reservados.</span>
+      <span>Feito com <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> para quem precisa</span>
+    </div>
+  </div>
+</footer>
+
+<div id="toast-container"></div>
+
+<script src="js/config.js"></script>
+<script src="js/api-unified.js"></script>
+<script>
+  const ICONS = ['bread','coat','bottle','pill','books','home','bath','salad'];
+
+  async function loadCampanhas() {
+    const grid = document.getElementById('campaigns-grid');
+    try {
+      const data = await API.getCampanhas();
+      const ativas = (data || []).filter(c => {
+        const st = campaignStatus(c.data_inicio, c.data_fim);
+        return st.label === 'Ativa';
+      }).slice(0, 3);
+
+      document.getElementById('stat-campanhas').querySelector('strong').textContent =
+        (data || []).filter(c => campaignStatus(c.data_inicio, c.data_fim).label === 'Ativa').length;
+
+      if (!ativas.length) {
+        grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1">
+          <div class="icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Nenhuma campanha ativa no momento</h3>
+          <p>Volte em breve para ver as próximas ações.</p>
+        </div>`;
+        return;
+      }
+      grid.innerHTML = ativas.map((c,i) => {
+        const st = campaignStatus(c.data_inicio, c.data_fim);
+        return `
+        <div class="card campaign-card">
+          <div class="campaign-card-top">
+            <div class="campaign-icon">${getIconSVG(ICONS[i % ICONS.length])}</div>
+            <span class="badge ${st.cls}">${st.label}</span>
+          </div>
+          <div class="campaign-card-body">
+            <h3>${c.titulo}</h3>
+            <p>${c.descricao}</p>
+            <div class="campaign-dates">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>${formatDate(c.data_inicio)}</span> até <span>${formatDate(c.data_fim)}</span>
+            </div>
+            <a href="pages/voluntario.html" class="btn btn-forest btn-sm">Quero ajudar</a>
+          </div>
+        </div>`;
+      }).join('');
+    } catch (e) {
+      grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1">
+        <div class="icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Erro ao carregar campanhas</h3>
+        <p>Tente novamente mais tarde.</p>
+      </div>`;
+      document.getElementById('stat-campanhas').querySelector('strong').textContent = '0';
+    }
+  }
+
+  async function loadStats() {
+    try {
+      const vols = await API.getVoluntarios();
+      document.getElementById('stat-voluntarios').querySelector('strong').textContent = (vols || []).length;
+    } catch {
+      document.getElementById('stat-voluntarios').querySelector('strong').textContent = '0';
+    }
+  }
+
+  function getIconSVG(name) {
+    const icons = {
+      bread: '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4 10v2"/><path d="M20 10v2"/></svg>',
+      coat: '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.38 3.46L16 2 12 5.5 8 2l-4.38 1.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6l.23-1.37a8 8 0 0 1 5.54 0L12 10.18V20a2 2 0 0 1-2 2h-.18a2 2 0 0 1-1.82-1.18L6 19l-1.27.57A2 2 0 0 0 4 21.43V22a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-.57a2 2 0 0 0-.73-1.86L18 19l-2-1.18a2 2 0 0 1-1.82-1.18H14a1 1 0 0 1 .99-.84h.16a1 1 0 0 1 .99.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>',
+      bottle: '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6v4.5l2.5 2.5H6.5L9 6.5V2z"/><path d="M4 11.5v1.5c0 3 1 5.5 2 6.5h8c1-1 2-3.5 2-6.5v-1.5"/><path d="M6 2v1"/><path d="M18 2v1"/></svg>',
+      pill: '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 1.5l8.5 8.5a2.83 2.83 0 0 1 0 4L14 21l-5-5-2-2a2.83 2.83 0 0 1 0-4L10.5 1.5z"/></svg>',
+      books: '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
+      home: '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
+      bath: '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="M4 6v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><circle cx="12" cy="13" r="2"/><path d="M8 18l2 2 4-4 4 4"/></svg>',
+      salad: '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12c1.5-2 4-2 4 0s-2.5 4-4 0z"/><path d="M16 12c1.5-2 4-2 4 0s-2.5 4-4 0z"/></svg>'
+    };
+    return icons[name] || '';
+  }
+
+  // Contact form
+  document.getElementById('contact-form').addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!validateForm(e.target)) return;
+    const btn = e.target.querySelector('button[type=submit]');
+    btn.textContent = 'Enviando…'; btn.disabled = true;
+    await new Promise(r => setTimeout(r, 1000));
+    toast('Mensagem enviada com sucesso! Retornaremos em breve.', 'success');
+    e.target.reset();
+    btn.textContent = 'Enviar mensagem'; btn.disabled = false;
+  });
+
+  loadCampanhas();
+  loadStats();
+</script>
+</body>
+</html>
