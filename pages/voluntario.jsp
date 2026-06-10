@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,28 +17,28 @@
 
 <nav class="navbar">
   <div class="container navbar-inner">
-    <a href="../index.html" class="navbar-brand">
+    <a href="../index.jsp" class="navbar-brand">
       <span class="brand-icon"><i class="fas fa-handshake"></i></span> Conecta Solidário
     </a>
     <ul class="navbar-nav">
-      <li><a href="../index.html">Início</a></li>
-      <li><a href="../index.html#sobre">Sobre</a></li>
-      <li><a href="campanhas.html">Campanhas</a></li>
-      <li><a href="voluntario.html" class="active">Seja Voluntário</a></li>
-      <li><a href="../index.html#contato">Contato</a></li>
+      <li><a href="../index.jsp">Início</a></li>
+      <li><a href="../index.jsp#sobre">Sobre</a></li>
+      <li><a href="campanhas.jsp">Campanhas</a></li>
+      <li><a href="voluntario.jsp" class="active">Seja Voluntário</a></li>
+      <li><a href="../index.jsp#contato">Contato</a></li>
     </ul>
     <div class="navbar-actions">
-      <a href="voluntario.html" class="btn btn-primary btn-sm">Quero Ajudar</a>
+      <a href="voluntario.jsp" class="btn btn-primary btn-sm">Quero Ajudar</a>
     </div>
     <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <div class="mobile-menu">
-  <a href="../index.html">Início</a>
-  <a href="campanhas.html">Campanhas</a>
-  <a href="voluntario.html">Seja Voluntário</a>
-  <a href="../index.html#contato">Contato</a>
+  <a href="../index.jsp">Início</a>
+  <a href="campanhas.jsp">Campanhas</a>
+  <a href="voluntario.jsp">Seja Voluntário</a>
+  <a href="../index.jsp#contato">Contato</a>
 </div>
 
 <div class="page-hero">
@@ -89,7 +91,7 @@
           <div>
             <h4 style="font-size:.95rem;margin-bottom:4px">Tem uma campanha para sugerir?</h4>
             <p style="font-size:.85rem;margin:0">
-              <a href="../index.html#contato" style="color:var(--orange);font-weight:600">Entre em contato</a> com nossa equipe.
+              <a href="../index.jsp#contato" style="color:var(--orange);font-weight:600">Entre em contato</a> com nossa equipe.
             </p>
           </div>
         </div>
@@ -152,7 +154,7 @@
               Obrigado por querer ajudar! Nossa equipe entrará em contato em breve com informações
               sobre as próximas campanhas.
             </p>
-            <a href="campanhas.html" class="btn btn-forest">Ver campanhas ativas</a>
+            <a href="campanhas.jsp" class="btn btn-forest">Ver campanhas ativas</a>
           </div>
         </div>
       </div>

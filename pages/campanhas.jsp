@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,28 +17,28 @@
 
 <nav class="navbar">
   <div class="container navbar-inner">
-    <a href="../index.html" class="navbar-brand">
+    <a href="../index.jsp" class="navbar-brand">
       <span class="brand-icon"><i class="fas fa-handshake"></i></span> Conecta Solidário
     </a>
     <ul class="navbar-nav">
-      <li><a href="../index.html">Início</a></li>
-      <li><a href="../index.html#sobre">Sobre</a></li>
-      <li><a href="campanhas.html" class="active">Campanhas</a></li>
-      <li><a href="voluntario.html">Seja Voluntário</a></li>
-      <li><a href="../index.html#contato">Contato</a></li>
+      <li><a href="../index.jsp">Início</a></li>
+      <li><a href="../index.jsp#sobre">Sobre</a></li>
+      <li><a href="campanhas.jsp" class="active">Campanhas</a></li>
+      <li><a href="voluntario.jsp">Seja Voluntário</a></li>
+      <li><a href="../index.jsp#contato">Contato</a></li>
     </ul>
     <div class="navbar-actions">
-      <a href="voluntario.html" class="btn btn-primary btn-sm">Quero Ajudar</a>
+      <a href="voluntario.jsp" class="btn btn-primary btn-sm">Quero Ajudar</a>
     </div>
     <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
 <div class="mobile-menu">
-  <a href="../index.html">Início</a>
-  <a href="campanhas.html">Campanhas</a>
-  <a href="voluntario.html">Seja Voluntário</a>
-  <a href="../index.html#contato">Contato</a>
+  <a href="../index.jsp">Início</a>
+  <a href="campanhas.jsp">Campanhas</a>
+  <a href="voluntario.jsp">Seja Voluntário</a>
+  <a href="../index.jsp#contato">Contato</a>
 </div>
 
 <div class="page-hero">
@@ -103,7 +105,7 @@
           <h3>${c.titulo}</h3>
           <p>${c.descricao}</p>
           <div class="campaign-dates"><i class="fas fa-calendar-alt"></i> <span>${formatDate(c.data_inicio)}</span> até <span>${formatDate(c.data_fim)}</span></div>
-          ${st.label === 'Ativa' ? `<a href="voluntario.html" class="btn btn-forest btn-sm">Quero ajudar</a>` : `<span class="btn btn-ghost btn-sm" style="cursor:default">${st.label}</span>`}
+          ${st.label === 'Ativa' ? `<a href="voluntario.jsp" class="btn btn-forest btn-sm">Quero ajudar</a>` : `<span class="btn btn-ghost btn-sm" style="cursor:default">${st.label}</span>`}
         </div>
       </div>`;
     }).join('');

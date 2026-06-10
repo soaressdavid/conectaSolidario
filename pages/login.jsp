@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -41,7 +43,7 @@
       </button>
     </form>
 
-    <a href="../index.html" class="back-link">← Voltar ao site</a>
+    <a href="../index.jsp" class="back-link">← Voltar ao site</a>
   </div>
 </div>
 
@@ -74,7 +76,7 @@
       const res = await API.login(creds);
       // Backend retorna dados do admin no JSON
       sessionStorage.setItem('cs_admin', JSON.stringify(res));
-      window.location.href = 'admin.html';
+      window.location.href = 'admin.jsp';
     } catch (err) {
       if (err.status === 401 || err.status === 403) {
         document.getElementById('login-error').style.display = 'block';
@@ -82,7 +84,7 @@
         // Demo: aceitar credenciais de teste do config.js
         if (creds.email === CONFIG.DEMO.CREDENTIALS.email && creds.senha === CONFIG.DEMO.CREDENTIALS.senha) {
           sessionStorage.setItem('cs_admin', JSON.stringify({ email: creds.email, nome: 'Administrador' }));
-          window.location.href = 'admin.html';
+          window.location.href = 'admin.jsp';
         } else {
           document.getElementById('login-error').style.display = 'block';
         }

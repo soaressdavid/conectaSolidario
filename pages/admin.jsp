@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -29,7 +31,7 @@
     <a href="#" data-page="voluntarios">
       <span class="nav-icon"><i class="fas fa-users"></i></span> Voluntários
     </a>
-    <a href="../index.html" style="margin-top:auto">
+    <a href="../index.jsp" style="margin-top:auto">
       <span class="nav-icon"><i class="fas fa-globe"></i></span> Ver site
     </a>
   </nav>
@@ -93,7 +95,7 @@
             <button class="btn btn-forest" onclick="gotoPage('voluntarios')">
               Ver voluntários
             </button>
-            <a href="../index.html" class="btn btn-ghost" target="_blank">
+            <a href="../index.jsp" class="btn btn-ghost" target="_blank">
               <i class="fas fa-globe"></i> Ver site público
             </a>
           </div>
@@ -204,7 +206,7 @@
   document.getElementById('logout-btn').addEventListener('click', async () => {
     try { await API.logout(); } catch {}
     sessionStorage.removeItem('cs_admin');
-    window.location.href = 'login.html';
+    window.location.href = 'login.jsp';
   });
 
   // ── Page navigation ──────────────────────────────────────

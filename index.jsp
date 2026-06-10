@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,21 +18,21 @@
 <!-- ── Navbar ──────────────────────────────────────────────── -->
 <nav class="navbar">
   <div class="container navbar-inner">
-    <a href="index.html" class="navbar-brand">
+    <a href="index.jsp" class="navbar-brand">
       <span class="brand-icon">
         <i class="fas fa-handshake"></i>
       </span>
       Conecta Solidário
     </a>
     <ul class="navbar-nav">
-      <li><a href="index.html" class="active">Início</a></li>
+      <li><a href="index.jsp" class="active">Início</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#campanhas">Campanhas</a></li>
-      <li><a href="pages/voluntario.html">Seja Voluntário</a></li>
+      <li><a href="pages/voluntario.jsp">Seja Voluntário</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
     <div class="navbar-actions">
-      <a href="pages/voluntario.html" class="btn btn-primary btn-sm">Quero Ajudar</a>
+      <a href="pages/voluntario.jsp" class="btn btn-primary btn-sm">Quero Ajudar</a>
     </div>
     <button class="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -40,13 +42,13 @@
 
 <!-- Mobile menu -->
 <div class="mobile-menu">
-  <a href="index.html">Início</a>
+  <a href="index.jsp">Início</a>
   <a href="#sobre">Sobre</a>
   <a href="#campanhas">Campanhas</a>
-  <a href="pages/voluntario.html">Seja Voluntário</a>
+  <a href="pages/voluntario.jsp">Seja Voluntário</a>
   <a href="#contato">Contato</a>
-  <a href="pages/login.html">Área Admin</a>
-  <a href="pages/voluntario.html" class="btn btn-primary" style="margin-top:8px">Quero Ajudar</a>
+  <a href="pages/login.jsp">Área Admin</a>
+  <a href="pages/voluntario.jsp" class="btn btn-primary" style="margin-top:8px">Quero Ajudar</a>
 </div>
 
 <!-- ── Hero ────────────────────────────────────────────────── -->
@@ -61,7 +63,7 @@
       </p>
       <div class="hero-cta">
         <a href="#campanhas" class="btn btn-primary btn-lg">Ver Campanhas</a>
-        <a href="pages/voluntario.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5);color:#fff">Quero Ajudar</a>
+        <a href="pages/voluntario.jsp" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5);color:#fff">Quero Ajudar</a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat" id="stat-campanhas">
@@ -101,7 +103,7 @@
           Nossa plataforma centraliza campanhas de arrecadação, eventos voluntários e cadastros em
           um único lugar, simples e acessível.
         </p>
-        <a href="pages/voluntario.html" class="btn btn-lg" style="margin-top:28px;background:var(--white);color:var(--orange)">
+        <a href="pages/voluntario.jsp" class="btn btn-lg" style="margin-top:28px;background:var(--white);color:var(--orange)">
           Faça parte desta história
         </a>
       </div>
@@ -141,7 +143,7 @@
       <div class="loader-wrap"><div class="spinner"></div><p>Carregando campanhas…</p></div>
     </div>
     <div style="text-align:center;margin-top:36px">
-      <a href="pages/campanhas.html" class="btn btn-outline">Ver todas as campanhas →</a>
+      <a href="pages/campanhas.jsp" class="btn btn-outline">Ver todas as campanhas →</a>
     </div>
   </div>
 </section>
@@ -185,7 +187,7 @@
     <h2>Pronto para fazer parte?</h2>
     <p>Cadastre-se como voluntário agora e receba informações sobre as próximas campanhas.</p>
     <div class="cta-btns">
-      <a href="pages/voluntario.html" class="btn btn-primary btn-lg">Quero ser voluntário</a>
+      <a href="pages/voluntario.jsp" class="btn btn-primary btn-lg">Quero ser voluntário</a>
       <a href="#contato" class="btn btn-ghost btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Fale conosco</a>
     </div>
   </div>
@@ -256,17 +258,17 @@
       <div class="footer-col">
         <h4>Links</h4>
         <ul>
-          <li><a href="index.html">Início</a></li>
+          <li><a href="index.jsp">Início</a></li>
           <li><a href="#campanhas">Campanhas</a></li>
-          <li><a href="pages/voluntario.html">Seja Voluntário</a></li>
+          <li><a href="pages/voluntario.jsp">Seja Voluntário</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Admin</h4>
         <ul>
-          <li><a href="pages/login.html">Login</a></li>
-          <li><a href="pages/admin.html">Painel</a></li>
+          <li><a href="pages/login.jsp">Login</a></li>
+          <li><a href="pages/admin.jsp">Painel</a></li>
         </ul>
       </div>
     </div>
@@ -321,7 +323,7 @@
               <i class="fas fa-calendar-alt"></i>
               <span>${formatDate(c.data_inicio)}</span> até <span>${formatDate(c.data_fim)}</span>
             </div>
-            <a href="pages/voluntario.html" class="btn btn-forest btn-sm">Quero ajudar</a>
+            <a href="pages/voluntario.jsp" class="btn btn-forest btn-sm">Quero ajudar</a>
           </div>
         </div>`;
       }).join('');
