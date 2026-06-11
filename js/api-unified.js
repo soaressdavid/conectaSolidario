@@ -264,19 +264,18 @@ const API = (() => {
   // ── Interface Pública ────────────────────────────────────────
   return {
     // ── Campanhas ─────────────────────────────────────────────
-    getCampanhas:    ()      => request('GET',    '/campanhas'),
-    getCampanha:     id      => request('GET',    `/campanhas/${id}`),
-    postCampanha:    dados   => request('POST',   '/campanhas', dados),
-    putCampanha:     (id,d)  => request('PUT',    `/campanhas/${id}`, d),
-    deleteCampanha:  id      => request('DELETE', `/campanhas/${id}`),
-
+    getCampanhas:   ()      => request('GET',     '/campanhas.jsp'),
+    getCampanha:    id      => request('GET',     `/campanha.jsp:id=${id}`),
+    postCampanha:   dados   => request('POST',    '/campanhas.jsp', dados),
+    putCampanha:    (id,d)  => request('PUT',     `/campanha.jsp?id=${id}`, d),
+    deleteCampanha: id      => request('DELETE',  `/campanha.jsp?id=${id}`),
     // ── Voluntários ───────────────────────────────────────────
-    getVoluntarios:  ()      => request('GET',    '/voluntarios'),
-    postVoluntario:  dados   => request('POST',   '/voluntarios', dados),
+    getVoluntarios:  ()      => request('GET',    '/voluntarios.jsp'),
+    postVoluntario:  dados   => request('POST',   '/voluntarios.jsp', dados),
 
     // ── Auth ───────────────────────────────────────────────────
-    login:           creds   => request('POST',   '/login', creds),
-    logout:          ()      => request('POST',   '/logout'),
+    login:           creds   => request('POST',   '/login.jsp', creds),
+    logout:          ()      => request('POST',   '/logout.jsp'),
   };
 })();
 
@@ -332,7 +331,7 @@ function confirm(msg) {
 
 function requireAuth() {
   const logged = sessionStorage.getItem('cs_admin');
-  if (!logged) { window.location.href = '../pages/login.html'; return false; }
+  if (!logged) { window.location.href = '../pages/login.jsp'; return false; }
   return JSON.parse(logged);
 }
 

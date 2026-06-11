@@ -7,10 +7,10 @@ const CONFIG = {
   // MODO DE OPERAÇÃO
   // true: Usa dados fake para apresentação
   // false: Usa API real do backend
-  MODO_APRESENTACAO: true,
+  MODO_APRESENTACAO: false,
   
   // URL DA API REAL (usado quando MODO_APRESENTACAO = false)
-  API_BASE_URL: '/api',
+  API_BASE_URL: '/conectaSolidario/api',
   
   // CONFIGURAÇÕES DE APRESENTAÇÃO
   DEMO: {

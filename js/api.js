@@ -98,7 +98,7 @@ function confirm(msg) {
 // ─── Session check (admin pages) ────────────────────────────
 function requireAuth() {
   const logged = sessionStorage.getItem('cs_admin');
-  if (!logged) { window.location.href = '../pages/login.html'; return false; }
+  if (!logged) { window.location.href = '../pages/login.jsp'; return false; }
   return JSON.parse(logged);
 }
 
