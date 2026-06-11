@@ -52,17 +52,39 @@ conectaSolidario/
  
 ### 1. Configure o banco de dados
  
-Execute o script SQL para criar o banco:
+Execute o arquivo `schema.sql` que está na raiz do projeto. Ele já cria o banco, todas as tabelas e os dados iniciais.
  
-```sql
-CREATE DATABASE projeto_ong;
-USE projeto_ong;
--- (execute o schema completo do arquivo schema.sql)
-```
- 
+**Via phpMyAdmin (XAMPP):**
+1. Acesse `http://localhost/phpmyadmin`
+2. Clique em **Importar** no menu superior
+3. Selecione o arquivo `schema.sql` e clique em **Executar**
+**Via MySQL Workbench:**
+1. Abra uma nova aba de query
+2. Vá em **File → Open SQL Script** e selecione o `schema.sql`
+3. Execute com `Ctrl+Shift+Enter`
 Credenciais padrão já cadastradas:
 - **Email:** `admin@ong.com`
 - **Senha:** `123456`
+> **Usando MySQL Workbench ou MySQL do sistema?** Veja a seção abaixo sobre como escolher entre os dois.
+ 
+### 1.1 MySQL via XAMPP vs MySQL Workbench
+ 
+O MySQL do XAMPP e o MySQL Workbench **não podem rodar ao mesmo tempo na mesma porta (3306)**. Escolha um dos dois:
+ 
+**Opção A — MySQL Workbench (recomendado se já estiver instalado)**
+- Deixe o MySQL do XAMPP **parado** no painel do XAMPP
+- Abra o MySQL Workbench normalmente e execute o script do banco
+- O `conexao.jsp` já está configurado para `localhost:3306` — nenhuma alteração necessária
+**Opção B — MySQL do XAMPP**
+- Feche completamente o MySQL Workbench antes de iniciar
+- No painel do XAMPP, clique em **Start** no MySQL
+- Abra o **phpMyAdmin** em `http://localhost/phpmyadmin`
+- Crie o banco e execute o script SQL por lá
+- O `conexao.jsp` também funciona sem alterações, pois usa a mesma porta `3306`
+> ⚠️ Se o MySQL do XAMPP não iniciar, verifique se o MySQL Workbench (ou outro serviço) está usando a porta 3306. Apenas um pode estar ativo por vez.
+ 
+---
+ 
 ### 2. Configure a conexão
  
 Abra `includes/conexao.jsp` e ajuste se necessário:
@@ -210,3 +232,4 @@ Tabelas principais:
  
 **Campanhas aparecem como "Encerradas" mesmo sendo "Ativa" no banco**
 > O frontend calcula o status pelas datas (`data_inicio` e `data_fim`). Se a `data_fim` já passou, aparece como encerrada independente do campo `status_campanha`.
+ 
